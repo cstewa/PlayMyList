@@ -1,0 +1,11 @@
+= form_for("playlist", :url => '/add_tracks', :method => "post") do |f|
+	- @tracks.each do |track|
+		%br 
+		= check_box_tag 'url[]', track[:permalink_url]
+		= f.label(track[:title], track[:description])
+	= collection_select(:playlist, :id, Playlist.all, :id, :name)
+	= f.submit
+
+/ Next step: edit the add tracks action to add these track urls to the playlist the user selects. then in the playlist.show, you pass in the url for each Playlist.track, submit that to the embed info thing
+
+

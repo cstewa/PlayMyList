@@ -1,0 +1,9 @@
+%h1 Search A Track or Artist
+
+= form_for("track", :url => "/tracks", :method => "post") do |f|
+	
+	.field
+		= f.text_field "url"
+
+	.actions
+		= f.submit "Search"
