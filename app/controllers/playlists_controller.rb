@@ -13,7 +13,8 @@ def new
 end
 
 def create
-	@playlist = Playlist.create
+	@playlist = Playlist.create(params[:playlist])
+	redirect_to "/playlists/#{@playlist.id}"
 end
 
 def add_tracks
@@ -23,9 +24,13 @@ def add_tracks
 		@tracks << Track.create(:url => url)
 	end 
 	@playlist.tracks << @tracks
+	@playlist.save
+	redirect_to "/playlists/#{@playlist.id}"
 end
 
 def show
+	@playlist = Playlist.find(params[:id])
+
 end 
 
 end 

@@ -1,0 +1,8 @@
+%h1= @playlist.name
+
+%ul
+	-@playlist.tracks.each do |track|
+		%li= track.embed_info
+
+%h2
+	= link_to "Search for songs to add to your playlists", "/search"

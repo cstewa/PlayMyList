@@ -1,5 +1,7 @@
 Playmylist::Application.routes.draw do
 
+root :to => 'playlists#index'
+
 resources :playlists
 
 match "/search" => "playlists#search"
@@ -7,6 +9,7 @@ match "/search" => "playlists#search"
 post '/tracks' => "tracks#result"
 
 post '/add_tracks' => "playlists#add_tracks"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
