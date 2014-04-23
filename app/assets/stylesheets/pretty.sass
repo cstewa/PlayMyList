@@ -1,16 +1,33 @@
 @import 'reset'
 
+html
+	height: 100%
+
 body
 	background: #333
 	margin: 0
 	padding: 0
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+	height: 100%
+	overflow: hidden
 
-main
+section.left
+	float: left
+	width: 50%
 	background: #fff
-	width: 500px
-	margin: 0 auto
-	padding: 40px
+	padding: 50px
+	box-sizing: border-box
+	height: 100%
+	overflow-y: scroll
+
+section.right
+	float: right
+	width: 50%
+	background: #ddd
+	padding: 50px
+	box-sizing: border-box
+	height: 100%
+	overflow-y: scroll
 
 h1
 	font-size: 40px
