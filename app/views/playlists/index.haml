@@ -1,13 +1,9 @@
-%h1 PLAY<em>my</em>LIST
+%h2 All Playlists: 
 
-%h2
-	All Playlists: 
+%ul.playlists
 	-@playlists.each do |playlist|
-		= link_to playlist.name, playlist_path(playlist.id)
-		%br
+		%li= link_to playlist.name, playlist_path(playlist.id)
 
-%h2
-	= link_to "Create A New Playlist", new_playlist_path
-
-%h2
-	= link_to "Search", "/search"
+.actions
+	= link_to "Create A New Playlist", new_playlist_path, class: 'button'
+	= link_to "Search", "/search", class: 'button'

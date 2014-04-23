@@ -2,13 +2,16 @@
 <html>
 <head>
   <title>Playmylist</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "pretty", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<main>
+  <h1> <a href="/">PLAY<em>my</em>LIST</a></h1>
+  <%= yield %></main>
+
 
 </body>
 </html>
